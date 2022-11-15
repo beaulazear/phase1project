@@ -1,0 +1,18 @@
+{
+    "dogs": [
+      {
+        "id": 1,
+        "name": "Ralph",
+        "image": "https://i.postimg.cc/yYnsgRCg/Ralph.jpg",
+        "likes": 8,
+        "dislikes": 0
+      },
+      {
+        "id": 2,
+        "name": "Ruth",
+        "image": "https://i.postimg.cc/k4PkhMdP/Ruth.jpg,",
+        "likes": 14,
+        "dislikes": 0
+      }
+    ]
+  }
