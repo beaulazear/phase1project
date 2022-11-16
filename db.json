@@ -4,17 +4,33 @@
         "id": 1,
         "name": "Ralph",
         "image": "https://i.postimg.cc/yYnsgRCg/Ralph.jpg",
-        "bio": "Pees when you leash him up, but only because he loves you",
-        "likes": 10,
-        "dislikes": 0
+        "bio": "Pees when you leash him up, but only because he loves you. Gets along great with other dogs, might try to play the whole time.",
+        "address": "388 Warren St",
+        "walkTime": "Between 12pm & 3pm",
+        "walkDuration": "30 minutes",
+        "monday": "yes",
+        "tuesday": "yes",
+        "wednesday": "yes",
+        "thursday": "yes",
+        "friday": "yes",
+        "saturday": "no",
+        "sunday": "no"
       },
       {
         "id": 2,
         "name": "Ruth",
         "image": "https://i.postimg.cc/k4PkhMdP/Ruth.jpg,",
-        "bio": "Sometimes eats trash, but gives the best snuggles",
-        "likes": 14,
-        "dislikes": 0
+        "bio": "Sometimes eats trash, but gives the best snuggles. Does not get along with other dogs... will attack, be careful!",
+        "address": "1064 Hancock St",
+        "walkTime": "Between 10am & 4pm",
+        "walkDuration": "30 minutes",
+        "monday": "yes",
+        "tuesday": "yes",
+        "wednesday": "yes",
+        "thursday": "yes",
+        "friday": "yes",
+        "saturday": "no",
+        "sunday": "no"
       }
     ]
   }

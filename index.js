@@ -14,9 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         document.getElementById("cardContainer").append(dogCard, dogImg, dogName, dogBio)
     }
-    fetch("db.json")
+    fetch("/Users/beaulazear/Development/code/Phase-1/phase1project/db.json")
     .then(resp => resp.json())
     .then(dog => makeDogCard(dog))
-    
+
     console.log("hello!")
 })
