@@ -4,13 +4,15 @@
         "id": 1,
         "name": "Ralph",
         "image": "https://i.postimg.cc/yYnsgRCg/Ralph.jpg",
-        "likes": 8,
+        "bio": "Pees when you leash him up, but only because he loves you",
+        "likes": 10,
         "dislikes": 0
       },
       {
         "id": 2,
         "name": "Ruth",
         "image": "https://i.postimg.cc/k4PkhMdP/Ruth.jpg,",
+        "bio": "Sometimes eats trash, but gives the best snuggles",
         "likes": 14,
         "dislikes": 0
       }
