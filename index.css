@@ -1,11 +1,25 @@
 #title {
-    text-align: center;
     font-style: italic;
     font-family: 'Times New Roman', Times, serif;
+    text-align: center;
 }
 
 body {
     background-color: darksalmon;
+    font-family: 'Times New Roman', Times, serif;
+    padding-left: 30px;
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+}
+
+.dogCard {
+    padding-inline-start: 15px;
+    width: 300px;
+    text-align: center;
+    display: inline-block;
+    text-align: center;
+}
+
+h4 {
+    max-width: fit-content;
+    text-align: center;
 }
