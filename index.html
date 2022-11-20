@@ -10,11 +10,17 @@
     </head>
     <body>
         <h1 id="title">Who is being walked today?</h1>
-        <h4>Type which day of the week you'd like to be displayed in the search bar below (please use all lowercase letters). All dogs to be walked that day will then be displayed :) To display all of the dogs and their information, just double click the submit button!</h4>
-        <form id="search">
-            <input type="text", id="input", name="daysearch" placeholder="which day? (lowercase)">
-            <button type="submit" id="btn">Search</button>
-        </form><br><br>
+        <p id="initial">Select which day you would like to view from the dropbox below. All scheduled dogs will then be uploaded, along with their walk information! Select "not scheduled" to view dogs in your data base that currently have no scheduled walks.</p><br>
+        <label for="day">Click here:</label>
+        <select name="day" id="day">
+            <option value="" disabled selected> --- </option>
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Unscheduled">Unscheduled</option>
+        </select><br><br>
         <div id="cardContainer">
 
         </div>

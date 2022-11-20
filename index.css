@@ -4,24 +4,50 @@
     text-align: center;
 }
 
-body {
-    background-color: darksalmon;
-    font-family: 'Times New Roman', Times, serif;
-    padding-left: 30px;
-    text-align: center;
-}
-
-.dogCard {
-    padding-inline-start: 15px;
-    width: 300px;
-    text-align: center;
-    display: inline-block;
-    text-align: center;
-}
-
-h4 {
+#initial {
     max-width: 500px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 20px;
+}
+
+body {
+    background-color: darksalmon;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.dogCard {
+    width: 300px;
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.dogContent{
+    padding-top: 5px;
+    background-color: aqua;
+    box-shadow: 6px 6px 6px 5px rgba(0,0,0,0.3);
+}
+
+
+#day {
+    background-color: aqua;
+}
+
+.cancelBtn {
+    height: 45px;
+    width: 90%;
+    border-color: darksalmon;
+    background-color: darksalmon;
+}
+
+p {
+    padding-left: 3px;
+    padding-right: 3px;
 }
