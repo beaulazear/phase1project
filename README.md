@@ -8,9 +8,8 @@ CONTACT
     beaulazear@gmail.com
     740-501-7570
 
-GITHUB
+GITHUB LINK
 
-    link for connected github repository
     https://github.com/beaulazear/phase1project.git
 
 NOTICE
