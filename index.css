@@ -22,7 +22,7 @@ body {
 
 .dogCard {
     width: 300px;
-    display: inline-block;
+    display: inline-flex;
     justify-content: center;
     text-align: center;
     padding-left: 10px;
@@ -33,6 +33,8 @@ body {
     padding-top: 5px;
     background-color: lightblue;
     box-shadow: 6px 6px 6px 5px rgba(0,0,0,0.3);
+    height: 670px;
+    width: 300px;
 }
 
 
@@ -50,4 +52,23 @@ body {
 p {
     padding-left: 3px;
     padding-right: 3px;
+}
+
+#newDogFormContainer {
+    width: 280px;
+    height: 450px;
+    font-family: 'Times New Roman', Times, serif;
+    display: inline-block;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: lightblue;
+    letter-spacing: 1px;
+    line-height: 20px;
+    box-shadow: 6px 6px 6px 5px rgba(0,0,0,0.3);
+}
+
+#dogBio {
+    width: 153px;
+    height: 50px ;
 }

@@ -45,14 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
     })
 
-    // function mouseOver(cancelBtn) {
-    //     cancelBtn.style.color("red")
-    // }
-    
-    // function mouseOut(cancelBtn) {
-        //     cancelBtn.style.color("white")
-        // }
-        
     function removeChildNodes() {
 
         let parent = document.getElementById("cardContainer")
@@ -80,4 +72,31 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById("cardContainer").append(dogCard)
 
     }
+    document.getElementById("newDogForm").addEventListener("submit", (e) => {
+
+        e.preventDefault()
+        console.log(e.target.formDogName)
+
+        let newDogObj = {
+            name:e.target.formDogName.value,
+            image:e.target.dogFormImg.value,
+            bio:e.target.dogBio.value,
+            address:e.target.dogFormAddress.value,
+            walkTime:e.target.dogFormWalkTime.value,
+            walkDuration:e.target.dogFormWalkDuration.value,
+            Unscheduled:'yes'
+        }
+
+        console.log(JSON.stringify(newDogObj))
+
+        fetch('http://localhost:3000/dogs', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body:JSON.stringify(newDogObj)
+        })
+        .then(document.getElementById("newDogForm").reset())
+
+    })
 })
