@@ -10,7 +10,7 @@
     </head>
     <body>
         <h1 id="title">Who is being walked today?</h1>
-        <p id="initial">Select which day you would like to view from the dropbox below. All scheduled dogs will then be uploaded, along with their walk information! Select "not scheduled" to view dogs in your data base that currently have no scheduled walks.</p><br>
+        <p id="initial">Select which day you would like to view from the dropbox below. All scheduled dogs will then be uploaded, along with their walk information! Select "Unscheduled" to view dogs in your data base that currently have no scheduled walks.</p><br>
         <label for="day">Click here:</label>
         <select name="day" id="day">
             <option value="" disabled selected> --- </option>
@@ -19,14 +19,16 @@
             <option value="Wednesday">Wednesday</option>
             <option value="Thursday">Thursday</option>
             <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
             <option value="Unscheduled">Unscheduled</option>
         </select><br><br>
         <div id="cardContainer">
 
-        </div>
+        </div><br>
         <div id="newDogFormContainer">
             <h2>New Dog Form</h2>
-            <p>Please fill out the form below to add a new dog to the database! Dogs will start as unscheduled until comuunications have been made to schedule walks!</p>
+            <p>Please fill out the form below to add a new dog to the database! Dogs will start as unscheduled until comuunications have been made to schedule walks.</p>
             <form id="newDogForm">
                 <input type="text" id="formDogName" placeholder="Dog's Name"><br>
                 <input type="text" id="dogFormAddress" placeholder="Address"><br>

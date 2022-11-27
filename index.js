@@ -17,12 +17,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
             function sortDogs(dogs) {
                 removeChildNodes()
-                dogs.forEach(dog => {
-                    if (dog[dayOfWeek] === "yes") {
-                        renderDogCard(dog)
+
+                let todaysWalksArr = []
+
+                for(let i = 0; i < dogs.length; i++) {
+                    if (dogs[i][dayOfWeek] === "yes") {
+                        renderDogCard(dogs[i])
+                        todaysWalksArr.push(dogs[i])
                     }
-                })
+                }
+                if (todaysWalksArr.length < 1) {
+                    removeChildNodes()
+                    renderNoWalkMessage()
+                }
             }
+
+            function renderNoWalkMessage() {
+                removeChildNodes()
+
+                let noWalkMessage = document.createElement("div")
+                noWalkMessage.id = "noWalkMessage"
+                noWalkMessage.innerHTML = `
+                <div>
+                    <p>There are no walks scheduled today, enjoy your day off!</p>
+                    <img src="images/Rosie.jpg height="400px" width="300px">
+                </div>`
+
+                document.getElementById("cardContainer").append(noWalkMessage)
+            }
+
             function removeWalk() {
 
                 let cancelBtn = document.querySelectorAll('.cancelBtn')
@@ -35,11 +58,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 cancelBtn.forEach(btn => {
                     btn.addEventListener("mouseover", (e) => {
                         e.target.textContent = "Are you sure?"
+                        e.target.style.backgroundColor = 'yellow'
                     })
                 })
                 cancelBtn.forEach(btn => {
                     btn.addEventListener("mouseout", (e) => {
                         e.target.textContent = "Cancel walk"
+                        e.target.style.backgroundColor = '#e9967a'
                     })
                 })
             }
