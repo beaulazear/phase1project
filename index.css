@@ -44,9 +44,11 @@ body {
 
 .cancelBtn {
     height: 45px;
-    width: 90%;
+    width: 280px;
     border-color: darksalmon;
     background-color: darksalmon;
+    bottom: 0;
+    margin: auto;
 }
 
 p {
@@ -84,4 +86,18 @@ p {
     letter-spacing: 1px;
     line-height: 20px;
     box-shadow: 6px 6px 6px 5px rgba(0,0,0,0.3);
+}
+
+footer {
+    font-size: large;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 1px;
+    line-height: 20px;
+    position: fixed;
+    background-color: darksalmon;
+    opacity: 85%;
 }

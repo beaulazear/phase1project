@@ -88,8 +88,8 @@ document.addEventListener('DOMContentLoaded', () => {
         <img src="${dog.image}" id="dogImg" width="294px" height="392"/>
             <h3>${dog.name}</h3>
             <p>${dog.bio}</p>
-            <p>${dog.name} gets walked for ${dog.walkDuration}!</p>
-            <p>Pick up ${dog.name} at ${dog.address} ${dog.walkTime}</p>
+            <p>${dog.name} gets walked for ${dog.walkDuration}</p>
+            <p>Pick up ${dog.name} at ${dog.address} around ${dog.walkTime}</p>
             <button class="cancelBtn">Cancel Walk</button><br><br>
             </div>`
 
@@ -121,6 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
             body:JSON.stringify(newDogObj)
         })
         .then(document.getElementById("newDogForm").reset())
+        .then(location.reload())
 
     })
 })
