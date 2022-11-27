@@ -40,7 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 noWalkMessage.innerHTML = `
                 <div>
                     <p>There are no walks scheduled today, enjoy your day off!</p>
-                    <img src="images/Rosie.jpg height="400px" width="300px">
                 </div>`
 
                 document.getElementById("cardContainer").append(noWalkMessage)
