@@ -58,7 +58,7 @@ p {
 
 #newDogFormContainer {
     width: 280px;
-    height: 450px;
+    height: auto;
     font-family: 'Times New Roman', Times, serif;
     display: inline-block;
     text-align: center;
@@ -100,4 +100,12 @@ footer {
     position: fixed;
     background-color: darksalmon;
     opacity: 85%;
+}
+
+#checkboxContainer {
+    text-align: left;
+}
+
+.hiddenMessage {
+    display: none;
 }

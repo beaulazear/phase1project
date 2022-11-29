@@ -28,7 +28,7 @@
         </div><br>
         <div id="newDogFormContainer">
             <h2>New Dog Form</h2>
-            <p>Please fill out the form below to add a new dog to the database! Dogs will start as unscheduled until comuunications have been made to schedule walks.</p>
+            <p>Please fill out the form below to add a new dog to the database!</p>
             <form id="newDogForm">
                 <input type="text" id="formDogName" placeholder="Dog's Name"><br>
                 <input type="text" id="dogFormAddress" placeholder="Address"><br>
@@ -37,6 +37,22 @@
                 <input type="text" id="dogFormImg" placeholder="image URL"><br><br>
                 <label for="dogBio">Brief bio of your dog:</label><br><br>
                 <textarea maxlength="120" name="dogBio" id="dogBio" placeholder="Type bio here" rows="4" columns="70"></textarea><br>
+                <p>Check which days that walks are needed:</p>
+                <div id="checkboxContainer">
+                <input type="checkbox" class="checkbox" id="mondayBox" value="mondayBox">
+                <label for="mondayBox">Monday</label><br>
+                <input type="checkbox" class="checkbox" id="tuesdayBox" value="tuesdayBox">
+                <label for="tuesdayBox">Tuesday</label><br>
+                <input type="checkbox" class="checkbox" id="wednesdayBox" value="wednesdayBox">
+                <label for="wednesdayBox">Wednesday</label><br>
+                <input type="checkbox" class="checkbox" id="thursdayBox" value="thursdayBox">
+                <label for="thursdayBox">Thursday</label><br>
+                <input type="checkbox" class="checkbox" id="fridayBox" value="fridayBox">
+                <label for="fridayBox">Friday</label><br>
+                <input type="checkbox" class="checkbox" id="saturdayBox" value="saturdayBox">
+                <label for="saturdayBox">Saturday</label><br>
+                <input type="checkbox" class="checkbox" id="sundayBox" value="sundayBox">
+                <label for="sundayBox">Sunday</label></div><br>
                 <input type="submit" id="dogFormSubmit" value="submit"><br><br>
             </form>
         </div><br><br><br>

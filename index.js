@@ -1,64 +1,54 @@
 document.addEventListener('DOMContentLoaded', () => {
-
-    let myForm = document.getElementById("day")
-
-    myForm.addEventListener("change", () => {
-        fetch("http://localhost:3000/dogs")
-        .then(resp => resp.json())
-        .then(dogs => {
-            sortDogs(dogs)
-            removeWalk(dogs)
+    
+    let dogDataArr = []
+    fetch("http://localhost:3000/dogs")
+    .then(resp => resp.json())
+    .then(data => {
+        data.forEach(dog => {
+            dogDataArr.push(dog)
+            return dogDataArr
         })
     })
+    
+    let daySelector = document.getElementById("day")
+    daySelector.addEventListener("change", () => {
+        sortDogs(dogDataArr)
+    })
 
-    function removeWalk() {
-        
+    function sortDogs(arr) {
+
+        removePreviousWalks()
+
+        let selectedDay = document.getElementById("day").value
+
+        let todaysWalksArr = arr.filter(dog => dog.days[selectedDay] === true)
+
+        renderDogCards(todaysWalksArr)
+
+        if (todaysWalksArr.length < 1) {
+            removePreviousWalks()
+            renderNoWalkMessage()
+        }
+
         let cancelBtns = document.querySelectorAll('.cancelBtn')
-        
         cancelBtns.forEach(btn => {
             btn.addEventListener('click', (e) => {
-                e.target.parentElement.remove()
+                e.target.parentElement.parentElement.remove()
             })
-        })
-
-        cancelBtns.forEach(btn => {
             btn.addEventListener("mouseover", (e) => {
                 e.target.textContent = "Are you sure?"
                 e.target.style.backgroundColor = 'yellow'
             })
-        })
-        
-        cancelBtns.forEach(btn => {
             btn.addEventListener("mouseout", (e) => {
                 e.target.textContent = "Cancel walk"
                 e.target.style.backgroundColor = '#e9967a'
             })
         })
     }
-    
-    function sortDogs(dogs) {
-        
-        removeChildNodes()
-        
-        let todaysWalksArr = []
-        let dayOfWeek = document.getElementById("day").value
 
-        for (let i = 0; i < dogs.length; i++) {
-            if (dogs[i][dayOfWeek] === "yes") {
-                renderDogCard(dogs[i])
-                todaysWalksArr.push(dogs[i])
-            }
-        }
-        
-        if (todaysWalksArr.length < 1) {
-            removeChildNodes()
-            renderNoWalkMessage()
-        }
-    }
-    
     function renderNoWalkMessage() {
 
-        removeChildNodes()
+        removePreviousWalks()
 
         let noWalkMessage = document.createElement("div")
         noWalkMessage.id = "noWalkMessage"
@@ -69,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById("cardContainer").append(noWalkMessage)
     }
 
-    function removeChildNodes() {
+    function removePreviousWalks() {
 
         let parent = document.getElementById("cardContainer")
 
@@ -78,23 +68,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function renderDogCard(dog) {
+    function renderDogCards(dogArr) {
 
-        let dogCard = document.createElement("ul")
+        dogArr.forEach(dog => {
+            let dogCard = document.createElement("ul")
 
-        dogCard.className = "dogCard"
-        dogCard.innerHTML = `
-        <div class="dogContent">
-        <img src="${dog.image}" id="dogImg" width="294px" height="392"/>
-            <h3>${dog.name}</h3>
-            <p>${dog.bio}</p>
-            <p>${dog.name} gets walked for ${dog.walkDuration}</p>
-            <p>Pick up ${dog.name} at ${dog.address} around ${dog.walkTime}</p>
-            <button class="cancelBtn">Cancel Walk</button><br><br>
-            </div>`
+            dogCard.className = "dogCard"
+            dogCard.innerHTML = `
+            <div class="dogContent">
+            <img src="${dog.image}" id="dogImg" width="294px" height="392"/>
+                <h3>${dog.name}</h3>
+                <p>${dog.bio}</p>
+                <p>${dog.name} gets walked for ${dog.walkDuration}</p>
+                <p>Pick up ${dog.name} at ${dog.address} around ${dog.walkTime}</p>
+                <button class="cancelBtn">Cancel Walk</button><br><br>
+                </div>`
 
-        document.getElementById("cardContainer").append(dogCard)
-
+            document.getElementById("cardContainer").append(dogCard)
+        })
     }
 
     document.getElementById("newDogForm").addEventListener("submit", (e) => {
@@ -108,7 +99,15 @@ document.addEventListener('DOMContentLoaded', () => {
             address: e.target.dogFormAddress.value,
             walkTime: e.target.dogFormWalkTime.value,
             walkDuration: e.target.dogFormWalkDuration.value,
-            Unscheduled: 'yes'
+            days: {
+                Monday: e.target.mondayBox.checked,
+                Tuesday: e.target.tuesdayBox.checked,
+                Wednesday: e.target.wednesdayBox.checked,
+                Thursday: e.target.thursdayBox.checked,
+                Friday: e.target.fridayBox.checked,
+                Saturday: e.target.saturdayBox.checked,
+                Sunday: e.target.sundayBox.checked
+            }
         }
 
         fetch('http://localhost:3000/dogs', {
@@ -120,8 +119,15 @@ document.addEventListener('DOMContentLoaded', () => {
         })
             .then((resp) => resp.json())
             .then((data) => {
-                document.getElementById("newDogForm").reset()
-                window.alert("Dog uploaded to database")
+                
+                dogDataArr.push(data)
+
+                fetch('http://localhost:3000/dogs')
+                .then(resp => resp.json())
+                .then(data => {
+                    sortDogs(data)
+                    document.getElementById("newDogForm").reset()
+                })
             })
     })
 })
