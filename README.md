@@ -1,6 +1,12 @@
-README
-    
-    This is an application to display which dogs are scheduled to be walked on a specific day. There is a select option with every day of the week (besides weekends, which I do not work). There is also an option for unscheduled dogs, which will display all the dogs that are in the database but not currently scheduled to be walked. All information is pulled from a local JSON database. Information includes days the dog is to be walked, timeframe they should be walked during, walk duration, their address, and a little bio with some information that may help on the walk.
+NAME
+
+    Beau Lazear's Phase 1 project for the Flatiron School's software development program.
+
+DESCRIPTION
+
+    This application is to help the independent dog walker stay organized. Dog data is stored in a local db.json file, and accessed by running a json-server in background. There is a select box, that lets you choose which day of the week you would like to view. Once a day is selected, all dogs scheduled to be walked that day will be displayed, along with the information needed to complete said walk. There is a form on the bottom of the page to submit a new dog to the database.
+
+    ![](0B594AD7-F510-4F99-9BD9-F872185FE0B4.gif)
 
 CONTACT
 
@@ -14,4 +20,4 @@ GITHUB LINK
 
 NOTICE
 
-    for security reasons, addresses have been changed to ensure client privacy! One day, this could be recreated with a secured server.
+    For security reasons, addresses have been changed to ensure client privacy! One day, this could be recreated with a secured server.
