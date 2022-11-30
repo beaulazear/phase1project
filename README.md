@@ -8,11 +8,11 @@ DESCRIPTION
 
 GIFS
 
-    ![](https://github.com/beaulazear/phase1project/blob/f6a4a893eb2b1fa411f1fbaf1068cc5c1255758c/0B594AD7-F510-4F99-9BD9-F872185FE0B4.gif)
+    ![](https://github.com/beaulazear/phase1project/0B594AD7-F510-4F99-9BD9-F872185FE0B4.gif)
 
-    ![](https://github.com/beaulazear/phase1project/blob/f6a4a893eb2b1fa411f1fbaf1068cc5c1255758c/0F3C07F9-E5B1-465F-A1F2-08C7CD4E87E0.gif)
+    ![](https://github.com/beaulazear/phase1project/0F3C07F9-E5B1-465F-A1F2-08C7CD4E87E0.gif)
 
-    ![](https://github.com/beaulazear/phase1project/blob/f6a4a893eb2b1fa411f1fbaf1068cc5c1255758c/861CCFBF-7231-4693-A30C-24B0C62D8820.gif)
+    ![](https://github.com/beaulazear/phase1project/861CCFBF-7231-4693-A30C-24B0C62D8820.gif)
 
 CONTACT
 
