@@ -16,10 +16,6 @@ CONTACT
     beaulazear@gmail.com
     740-501-7570
 
-GITHUB LINK
-
-    https://github.com/beaulazear/phase1project.git
-
 NOTICE
 
     For security reasons, addresses have been changed to ensure client privacy! One day, this could be recreated with a secured server.
