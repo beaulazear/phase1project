@@ -6,9 +6,9 @@ DESCRIPTION
 
     This application is made to help the independent dog walker stay organized. Dog data is stored in a local db.json file, and accessed by running a json-server in background. There is a select box, that lets you choose which day of the week you would like to view. Once a day is selected, all dogs scheduled to be walked that day will be displayed, along with the information needed to complete said walk. There is a form on the bottom of the page to submit a new dog to the database.
 
-GIF
+GIf
 
-    ![](0B594AD7-F510-4F99-9BD9-F872185FE0B4.gif)
+![screencast](0B594AD7-F510-4F99-9BD9-F872185FE0B4.gif)
 
 CONTACT
 
